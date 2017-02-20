@@ -1,0 +1,11 @@
+body#tinymce.wp-editor {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+body#tinymce.wp-editor h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+body#tinymce.wp-editor p {
+    font-weight: 300;
+}

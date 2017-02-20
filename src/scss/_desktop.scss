@@ -1,0 +1,104 @@
+/*******************
+* Index Navigation *
+*******************/
+
+body.home .wrapper {
+	height: 50px; //Fix for vertical align in IE
+	min-height: calc(100vh - 70px);
+	.logo {
+		h1 {
+			font-size: 12em;
+		}
+	}
+	nav {
+		@include flexbox();
+		@include align-items(center);
+		@include justify-content(center);
+		background-position: 0% 75%;
+		border-top: 1px solid #fff;
+		position: relative;
+		width: 100%;
+		.menu-mainmenu-container {
+			bottom: -13px;
+			left: 50%;
+			position: absolute;
+			-ms-transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+	}
+}
+
+/******************
+* Page Navigation *
+******************/
+
+body:not(.home) {
+	.menu-mainmenu-container {
+		position: fixed;
+		right: -60px;
+		top: 107px;
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+		-moz-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+		a {
+			margin-right: 20px;
+		}
+	}
+}
+
+/*********
+* Music *
+*********/
+
+article.music {
+	.music-content {
+		filter: alpha(opacity=0);
+		opacity: 0;
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		iframe {
+			max-height: 350px;
+		}
+	}
+	.music-thumbnail {
+		filter: alpha(opacity=60);
+		opacity: 0.6;
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	&:hover {
+		.music-thumbnail {
+			filter: alpha(opacity=100);
+			opacity: 1;
+		}
+		.music-content {
+			filter: alpha(opacity=100);
+			opacity: 1;
+		}	
+	}
+}
+
+/*******
+* Info *
+*******/
+
+article.info {
+    padding: 60px 15%;
+}
+
+/****************
+* Blog: Sidebar *
+****************/
+
+section.banner {
+	p, h2 {
+		display: inline-block;
+	}
+	p {
+		margin-left: 5px;
+	}
+}

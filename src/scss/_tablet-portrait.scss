@@ -1,0 +1,67 @@
+/******************************
+* General Navigation Settings *
+******************************/
+
+#responsive-menu-container {
+    #responsive-menu {
+        li.responsive-menu-item {
+            height: 90px;
+            a.responsive-menu-item-link {
+                font-size: 6em;
+            }
+        }
+        li.responsive-menu-item:first-child {
+            margin-top: 60px;
+        }
+    }
+}
+
+/*******************
+* Index Navigation *
+*******************/
+
+body.home .wrapper {
+	.logo {
+		h1 {
+			font-size: 8em;
+		}
+	}
+}
+
+/*********
+* Main *
+*********/
+
+main {
+	margin: 98px 60px;
+}
+
+/*********
+* Music *
+*********/
+
+article.music {
+    padding: 0 80px;
+}
+
+/*******
+* Info *
+*******/
+
+article.info {
+    padding: 60px;
+}
+
+/****************
+* Blog: Sidebar *
+****************/
+
+section.banner {
+    h1 {
+        font-size: 1.2em;
+    }
+    p, h2 {
+        display: block;
+        font-size: 2.4em;
+    }
+}

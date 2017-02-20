@@ -1,0 +1,49 @@
+/* Browser prefix for flexbox */
+@mixin flexbox() {
+    display: -webkit-box;      /* Old - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* Old - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* Tweener - IE 10 */
+    display: -webkit-flex;     /* New - Chrome */
+    display: flex;
+}
+@mixin align-items($value) {
+    -moz-box-align: $value;
+    -ms-flex-align: $value;
+    -webkit-align-items: $value;
+    -webkit-box-align: $value;
+    align-items: $value;
+}
+@mixin flex-direction($direction) {
+    -ms-flex-direction: $direction;
+    -webkit-box-direction: $direction;
+    -webkit-flex-direction: $direction;
+    flex-direction: $direction;
+}
+@mixin flex($value) {
+    -webkit-box-flex-grow: $value;
+    -webkit-flex: $value;
+    -ms-flex: $value;
+    flex: $value;
+}
+@mixin justify-content($value) {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+    -ms-flex-pack: $value;
+    -webkit-justify-content: $value;
+    justify-content: $value;
+}
+@mixin flex-wrap($value) {
+    -webkit-box-flex-wrap: $value;
+    -webkit-flex-wrap: $value;
+    -ms-flex-wrap: $value;
+    flex-wrap: $value;
+}
+@mixin move($value) {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    &:hover {
+        -webkit-transform: translateX($value);
+        -ms-transform: translateX($value);
+        transform: translateX($value);
+    }
+}
